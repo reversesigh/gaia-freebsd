@@ -118,7 +118,7 @@ vulncheck: $(BUILDDIR)/
 	$(BUILDDIR)/govulncheck ./...
 
 build-linux: go.sum
-	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
+	LEDGER_ENABLED=false GOOS=freebsd GOARCH=amd64 $(MAKE) build
 
 go-mod-cache: go.sum
 	@echo "--> Download go modules to local cache"
